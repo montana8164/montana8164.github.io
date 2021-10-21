@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <title> Jh.S </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+         <script>
+          $(document).ready(function(){
+           $('#img_gp').animate(
+            {left: 600},
+            0,
+            'swing');
+
+            $('#img_gp_h').animate(
+            {left: 600},
+            0,
+            'swing');
+
+            $('#video_gp').animate(
+            {left: 600},
+            0,
+            'swing');
+
+
+
+            $("#img1_h").on('mouseover', function(){
+            $("#img1").stop().animate({'width':'480px','height':'630px',}, 400);
+            $("#img1_h").stop().animate({'width':'480px','height':'630px', 'opacity':'1'}, 100);
+
+            });
+
+            $("#img1_h").on('mouseleave', function(){
+            $("#img1").stop().animate({'width':'380px','height':'530px'}, 400);
+            $("#img1_h").stop().animate({'width':'380px','height':'530px', 'opacity':'0'}, 100);
+
+            });
+
+            
+            $("#img2_h").on('mouseover', function(){
+            $("#img2").stop().animate({'width':'480px','height':'630px'}, 400);
+            $("#img2_h").stop().animate({'width':'480px','height':'630px', 'opacity':'1'}, 100);
+
+            });
+
+            $("#img2_h").on('mouseleave', function(){
+            $("#img2").stop().animate({'width':'380px','height':'530px'}, 400);
+            $("#img2_h").stop().animate({'width':'380px','height':'530px', 'opacity':'0'}, 100);
+
+            });
+
+
+            $("#img3_h").on('mouseover', function(){
+            $("#img3").stop().animate({'width':'480px','height':'630px'}, 400);
+            $("#img3_h").stop().animate({'width':'480px','height':'630px', 'opacity':'1'}, 100);
+
+            });
+
+            $("#img3_h").on('mouseleave', function(){
+            $("#img3").stop().animate({'width':'380px','height':'530px'}, 400);
+            $("#img3_h").stop().animate({'width':'380px','height':'530px', 'opacity':'0'}, 100);
+
+            });
+
+
+            $("#img4_h").on('mouseover', function(){
+            $("#img4").stop().animate({'width':'480px','height':'630px'}, 400);
+            $("#img4_h").stop().animate({'width':'480px','height':'630px', 'opacity':'1'}, 100);
+
+            });
+
+            $("#img4_h").on('mouseleave', function(){
+            $("#img4").stop().animate({'width':'380px','height':'530px'}, 400);
+            $("#img4_h").stop().animate({'width':'380px','height':'530px', 'opacity':'0'}, 100);
+
+            });
+
+
+            jQuery(document).ready(function() {
+
+            var mouseX = 0, mouseY = 0;
+            var xp = 0, yp = 0;
+ 
+            $(document).mousemove(function(e){
+            mouseX = e.pageX - 0;
+            mouseY = e.pageY - 0; 
+            });
+  
+            setInterval(function(){
+            xp += ((mouseX - xp)/6);
+            yp += ((mouseY - yp)/6);
+            $("#circle").css({left: xp +'px', top: yp +'px'});
+            }, 20);
+
+            });
+
+
+
+
+
+        });
+
+
+        </script>
+
+            
+            
+    </head>
+    
+
+
+
+    <body>
+        
+        <div id = "background"></div>
+
+
+        <div id = "img_gp">
+            <div class = "img" id="img1">
+                <img src="new jersey.jpg">
+            </div>
+            <div class = "img" id="img2">
+                <img src="dnf.png">
+            
+            </div>
+            <div class = "img" id="img3">
+                <img src="ump45.jpg">                
+            </div>
+            <div class = "img" id="img4">
+                <img src="ak12.jpg">
+            </div>
+            
+        </div>
+
+        <div id = "img_gp_h">
+            <div class = "img_h" id="img1_h"></div>
+            <div class = "img_h" id="img2_h"></div>
+            <div class = "img_h" id="img3_h"></div>
+            <div class = "img_h" id="img4_h"></div>
+
+            <div class = "next"></div>
+        </div>
+
+
+        <div id = "video_gp">
+            <div class = "video">
+                <video height="480" width="854"autoplay muted loop>
+                    <source src="wkwk.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class = "video">
+                <video height="480" width="854"autoplay muted loop>
+                    <source src="mmm.mp4" type="video/mp4">
+            </div>
+
+            <div class = "next"></div>
+ 
+        </div>
+
+        <div id = "main_text">Jong Hun</div>
+
+
+        <div id = "side_text">illustration</div>
+        <div id = "side_text">video</div>
+
+        <div id = "text_container">
+            <div class = "text"> Profile </div>
+            <div class = "text"> Artwork </div>
+            <div class = "text"> Video </div>
+            
+         </div>
+
+
+        <div id = "icon_gp">
+            <div class = "icon"><img src="instagram.svg"></div>
+            <div class = "icon"><img src="twitter.svg"></div>
+            <div class = "icon"><img src="pixiv.svg"></div>
+        </div>
+        
+        <div id= "line_icon_gp">
+            <div class="line_icon"></div>
+            <div class="line_icon"></div>
+            <div class="line_icon"></div>
+
+        </div>
+
+        <div class="line_00"></div>
+        <div class="line_0"></div>
+        <div class="line"></div>
+        <div class="line_1"></div>
+        <div class="line_2"></div>
+
+        <span id="circle" class="circle"></span>
+        
+        
+        
+
+        
+
+    </body>
+
+
+
+
+
+
+
+
+
+</html>
